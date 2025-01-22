@@ -8,7 +8,7 @@ jobs:
   Integration:
     strategy:
       matrix:
-        os:
+        os: 
           - 'ubuntu-latest'
           - 'macOs-latest'
     runs-on: ${{ matrix.os }}
