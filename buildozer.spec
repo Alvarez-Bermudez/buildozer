@@ -1,10 +1,10 @@
 [app]
 
 # (str) Title of your application
-title = Esperanza2
+title = dcc
 
 # (str) Package name
-package.name = textexesperanza2
+package.name = ass
 
 # (str) Package domain (needed for android/ios packaging)
 package.domain = org.
@@ -67,7 +67,7 @@ orientation = portrait
 osx.python_version = 3
 
 # Kivy version to use 
-osx.kivy_version = 1.9.1 
+osx.kivy_version = 2.3.0
 
 #
 # Android specific
