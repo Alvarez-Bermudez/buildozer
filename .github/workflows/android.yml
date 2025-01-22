@@ -25,7 +25,85 @@ jobs:
     - uses: actions/checkout@v4
     - name: Setup environment
       run: |
-        pip install .
+        pip install buildozer==1.4.0
+        python3 -m venv venv
+        source venv/bin/activate
+        echo "Using Python==$(python --version)"
+        sudo apt update
+        sudo apt install -y git \
+          zip \
+          unzip \
+          openjdk-17-jdk \
+          python3-pip \
+          autoconf \
+          libtool \
+          pkg-config \
+          zlib1g-dev \
+          libncurses5-dev \
+          libncursesw5-dev \
+          cmake \
+          libffi-dev \
+          libssl-dev
+          build-essential \
+          git \
+          ffmpeg \
+          libsdl2-dev \
+          libsdl2-image-dev \
+          libsdl2-mixer-dev \
+          libsdl2-ttf-dev \
+          libportmidi-dev \
+          libswscale-dev \
+          libavformat-dev \
+          libavcodec-dev \
+          libunwind-dev \
+          zlib1g-dev \
+          libsqlite3-dev \
+          sqlite3 \
+          bzip2 \
+          libbz2-dev \
+          zlib1g-dev \
+          openssl \
+          libgdbm-dev \
+          libgdbm-compat-dev \
+          liblzma-dev \
+          libreadline-dev \
+          uuid-dev \
+          libgstreamer1.0 \
+          gstreamer1.0-plugins-base \
+          gstreamer1.0-plugins-good
+          zip \
+          unzip \
+          autoconf \
+          libtool \
+          pkg-config \
+          libncurses5-dev \
+          libncursesw5-dev \
+          cmake \
+          libffi-dev \
+          libssl-dev \
+          automake\
+          zip \
+          unzip \
+          openjdk-17-jdk \
+          python3-pip \
+          autoconf \
+          libtool \
+          pkg-config \
+          zlib1g-dev \
+          libncurses5-dev \
+          libncursesw5-dev \
+          libtinfo5 \
+          cmake \
+          libffi-dev \
+          libssl-dev
+        export PATH=$PATH:~/.local/bin/
+        python3 -m pip install --upgrade \
+          Cython==0.29.33 \
+          buildozer==1.2.0\
+          datetime\
+          sqlite3\
+          kivy\
+          android
         
     - run: buildozer --help
     - run: buildozer init
